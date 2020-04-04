@@ -1,0 +1,13 @@
+.form{
+    padding-top: 17vh;
+    max-width: 100vh;
+}
+
+.inline{
+    display: flex;
+    justify-content: space-between;
+  }
+
+.continue{
+    background-color: #4CAF50;
+  }

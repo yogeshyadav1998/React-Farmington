@@ -1,19 +1,13 @@
 import React from 'react';
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
 
-import Header from './components/headerComponent/headerComponent';
-import Testimonials from './components/testimonialComponent/testimonials';
-import AboutUs from './components/aboutComponent/aboutUs';
-import Contact from './components/contactComponent/contactUs';
-import Relaible from './components/reliableComponent/reliable';
-import Services from './components/servicesComponent/services';
-import Gallery from './components/galleryComponent/gallery';
-import SignForm from './components/SignFormComponent/SignForm';
-import Sell from './containers/sell/sell';
-import Subsidy from './containers/Subsidy/Subsidy';
-import ShopHome from './containers/buy/shopHome';
-import Subsidyform from './components/SubsidyformComponent/Subsidyform';
-import Adpostform from './components/adsformComponent/adpostform';
+import Header from './components/UI/header/headerComponent';
+import Home  from './components/home/home';
+import Sell from './components/sell/sell';
+import Subsidy from './components/Subsidy/Subsidy';
+import Shop from './components/shop/shop';
+import Subsidyform from './components/Subsidy/SubsidyformComponent/Subsidyform';
+import Adpostform from './components/sell/adsformComponent/adpostform';
 
 function App() {
   return (
@@ -21,10 +15,9 @@ function App() {
       <div className="App">
       <Header></Header>
         <Switch>
-          <Route path="/" exact component={Homee}/>
-          <Route path="/signup" component={SignForm}/>
+          <Route path="/" exact component={Home}/>
           <Route path="/sell" component={Sell}/>
-          <Route path="/buy" component={ShopHome}/>
+          <Route path="/buy" component={Shop}/>
           <Route path="/subsidy" component={Subsidy}/>
           <Route path='/subsidyform' component={Subsidyform}/>
           <Route path='/adpostform' component={Adpostform}/>
@@ -33,16 +26,5 @@ function App() {
     </Router>
   );
 }
-
-const Homee=()=>(
-  <div>
-      <Gallery></Gallery>
-      <AboutUs></AboutUs>
-      <Services></Services>
-      <Testimonials></Testimonials>
-      <Relaible></Relaible>
-      <Contact></Contact>
-  </div>
-);
 
 export default App;

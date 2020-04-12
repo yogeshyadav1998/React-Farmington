@@ -15,7 +15,9 @@
     font-family: 'Indie Flower', cursive;
   }
 
-  .ads{
-    margin: 2vh 24vh;
-    display: flex;
+  .ads{    
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 2vh 27vh 0vh 27vh;
 }

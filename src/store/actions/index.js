@@ -4,6 +4,13 @@ export {
 } from './subsidy';
 
 export {
-    postad,
-    fetchads
-} from './ads';
+    postad
+} from './postad';
+
+export {
+    fetchallads,
+    fetchfruitads,
+    fetchvegetableads,
+    fetchgrainads,
+    fetchpulsesads
+} from './fetchads';

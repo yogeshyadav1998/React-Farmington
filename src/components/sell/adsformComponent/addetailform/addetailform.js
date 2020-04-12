@@ -19,14 +19,11 @@ export class addetailform extends Component {
                         <Col md={7} offset={0}>
                         <label>Product Type</label>
                         <Form.Item>
-                        <Select defaultValue="Vegetable"
-                                style={{ width: 200 }}
-                                onChange={handlechange('producttype')}>
-                        <Option value="Vegetable">Vegetable</Option>
-                        <Option value="Fruit">Fruit</Option>
-                        <Option value="Grain">Grain</Option>
-                        <Option value="Pulses">Pulses</Option>
-                        </Select>
+                        <Input
+                            placeholder="enter product type -"
+                            onChange={handlechange('producttype')}
+                            defaultValue={values.producttype}
+                        />
                         </Form.Item>
                         </Col>
                         <Col md={7}>

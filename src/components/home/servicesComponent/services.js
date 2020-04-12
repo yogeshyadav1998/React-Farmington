@@ -15,7 +15,7 @@ class Services extends Component {
               style={{ width: 280 }}
               cover={<img alt="example" src="images/buy3.jfif"/>}
             >
-              <a href="/buy"><Meta title="Shop" /></a>
+              <a href="/shop"><Meta title="Shop" /></a>
             </Card>
           </Col>
           <Col md={5} offset={1}>

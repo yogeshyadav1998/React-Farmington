@@ -3,7 +3,17 @@ import { Row, Col, Button, Icon } from 'antd';
 import './headerComponent.css';
 import {Link} from 'react-scroll';
 class Header extends Component {
-  state = {};
+  state = {
+    show: false
+  };
+
+  componentDidMount(){
+    if (window.location.pathname === '/') {
+      this.setState({show: true});
+    }
+   }
+
+
   render() {
     return (
       <div style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
@@ -19,6 +29,8 @@ class Header extends Component {
           <Col md={2} offset={2}>
             <a href="/">Home</a>
           </Col>
+          {this.state.show ?
+          <div>
           <Col md={2}>
             <Link to="services" smooth={true} duration={1000} >Services</Link>
           </Col>
@@ -34,7 +46,9 @@ class Header extends Component {
           <Col md={2}>
             <Link to="gallery" smooth={true} duration={1000}>Gallery</Link>
           </Col>
-          <Col md={2} offset={5}>
+          </div>
+          : null}
+          <Col md={2} style={{position:"absolute", right:"11vh"}}>
             <a href="#">SignUp/SignIn</a>
           </Col>
         </Row>

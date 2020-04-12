@@ -1,0 +1,15 @@
+.productads{
+    padding-top: 17vh;
+}
+
+.ad{
+    margin: 4vh 4.5vh;
+}
+
+.button{
+    background-color: rgb(44, 156, 44);
+}
+
+.button:hover{
+    background-color: rgb(141, 209, 141);
+}

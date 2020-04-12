@@ -10,11 +10,14 @@ import 'antd/dist/antd.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import subsidyrequestreducer from './store/reducers/subsidy';
-import adsreducer from './store/reducers/ads';
+import postadreducer from './store/reducers/postad';
+import fetchadsreducer from './store/reducers/fetchads'
 
 const rootreducer = combineReducers({
     subsidyrequest: subsidyrequestreducer,
-    ads: adsreducer
+    fetchads: fetchadsreducer,
+    postad: postadreducer
+    
 })
 
 

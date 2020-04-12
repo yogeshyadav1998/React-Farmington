@@ -7,7 +7,6 @@ import Productad from './productadComponent/productad';
 import './sell.css';
 import Spinner from './../UI/SpinnerComponent/spinner';
 import * as actions from './../../store/actions/index';
-import productad from './productadComponent/productad';
 
 class Sell extends Component {
 
@@ -25,13 +24,13 @@ class Sell extends Component {
     let productads = <Spinner/>
     if(!this.props.loading){
       productads = (
-        <div className="ads">
+        <ul className="ads">
         {this.props.productads.map(ad =>(
           <Productad  producttype={ad.producttype} 
           productname={ad.productname}
           price={ad.price}/>  
           ))}
-        </div>
+        </ul>
       )
     }
     return (
@@ -54,7 +53,7 @@ class Sell extends Component {
           </h1>
           </Col>
         </Row>
-        {productads}
+          {productads}
         </div>
     );
   }
@@ -62,14 +61,14 @@ class Sell extends Component {
 
 const mapStateToProps = state =>{
   return{
-    productads: state.ads.productads,
-    loading: state.ads.loading
+    productads: state.fetchads.productads,
+    loading: state.fetchads.loading
   }
 }
 
 const mapDispatchTOProps = dispatch => {
   return{
-    onfetchads: () => dispatch(actions.fetchads())
+    onfetchads: () => dispatch(actions.fetchallads())
   }
 }
 

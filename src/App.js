@@ -17,7 +17,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home}/>
           <Route path="/sell" component={Sell}/>
-          <Route path="/buy" component={Shop}/>
+          <Route path="/shop" component={Shop}/>
           <Route path="/subsidy" component={Subsidy}/>
           <Route path='/subsidyform' component={Subsidyform}/>
           <Route path='/adpostform' component={Adpostform}/>

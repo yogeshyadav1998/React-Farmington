@@ -8,4 +8,5 @@ export const POST_AD_START = 'POST_AD_START';
 export const POST_AD_SUCCESS = 'POST_AD_SUCCESS';
 
 export const FETCH_ADS_START = 'FETCH_ADS_START';
+export const STORE_ALL_ADS = 'STORE_ALL_ADS';
 export const FETCH_ADS_SUCCESS = 'FETCH_ADS_SUCCESS';

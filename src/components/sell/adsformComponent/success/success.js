@@ -45,7 +45,7 @@ export class success extends Component{
 
 const mapStateToProps = state =>{
     return{
-        loading: state.ads.loading
+        loading: state.postad.loading
     }
 }
 

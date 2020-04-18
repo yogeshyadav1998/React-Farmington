@@ -49,8 +49,12 @@ export const fetchsubsidyrequests = () =>{
                     {...response.data[key],
                     id: key}
                 )}
+            const userid = localStorage.getItem('userid');
+            const userrequests = fetchedrequests.filter(request=>{
+                return request.userid === userid
+            })
             setTimeout(()=>{
-                dispatch(fetchsubsidyrequestssuccess(fetchedrequests))
+                dispatch(fetchsubsidyrequestssuccess(userrequests))
             }, 1000)
         })
     }

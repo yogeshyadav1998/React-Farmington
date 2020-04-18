@@ -9,6 +9,7 @@ import * as actions from './../../../../store/actions/index';
 export class confirm extends Component{
     continue = e =>{
         e.preventDefault();
+        this.props.values.userid=this.props.Userid;
         const productad = this.props.values;
         this.props.onpostad(productad);
         this.props.nextstep();
@@ -80,10 +81,16 @@ export class confirm extends Component{
     }
 }
 
+const mapStateToProps = state =>{
+    return{
+        Userid: state.auth.userid
+    }
+}
+
 const mapDispatchToProps = dispatch => {
     return{
         onpostad: (productad) => dispatch(actions.postad(productad))
     }
 }
 
-export default connect(null,mapDispatchToProps)(confirm);
+export default connect(mapStateToProps,mapDispatchToProps)(confirm);

@@ -68,7 +68,7 @@ const mapStateToProps = state =>{
 
 const mapDispatchTOProps = dispatch => {
   return{
-    onfetchads: () => dispatch(actions.fetchallads())
+    onfetchads: () => dispatch(actions.fetchuserads())
   }
 }
 

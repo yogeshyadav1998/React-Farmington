@@ -15,7 +15,8 @@ class adpostform extends Component {
         price:'',
         address:'',
         deliverycharges:'',
-        additionaldetails:''
+        additionaldetails:'',
+        userid:''
     }
 
     nextstep = () => {

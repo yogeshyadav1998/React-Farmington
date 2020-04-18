@@ -9,6 +9,7 @@ import * as actions from '../../../../store/actions/index';
 export class confirm extends Component{
     continue = e =>{
         e.preventDefault();
+        this.props.values.userid = this.props.Userid;
         const subsidyrequest = this.props.values;
         this.props.onsubsidyrequestpost(subsidyrequest)
         this.props.nextstep();
@@ -24,7 +25,7 @@ export class confirm extends Component{
             Maritalstatus, Annualincome, Priority, Subsidytype, Investedamount, LoanaccountNumber,
             Loanamount, Landarea, Additionaldetail, Accountholdername, Bankname,
             Branchname, IFSCcode, PAN, Aadharcard, PANcard, Bankpassbook, Incomecerti,
-            Cropregistercerti, Landcerti, Photo, Signature}} = this.props;
+            Cropregistercerti, Landcerti, Photo, Signature, userid}} = this.props;
         return(
             <div className="form container">
                 <Row>
@@ -180,10 +181,16 @@ export class confirm extends Component{
     }
 }
 
+const mapStateToProps = state =>{
+    return{
+        Userid: state.auth.userid
+    }
+}
+
 const mapDispatchToProps = dispatch =>{
     return{
         onsubsidyrequestpost: (subsidyrequest) => dispatch(actions.subsidyrequestpost(subsidyrequest))
     }
 }
 
-export default connect(null,mapDispatchToProps)(confirm);
+export default connect(mapStateToProps,mapDispatchToProps)(confirm);

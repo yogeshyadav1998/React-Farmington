@@ -9,6 +9,7 @@ export {
 
 export {
     fetchallads,
+    fetchuserads,
     fetchfruitads,
     fetchvegetableads,
     fetchgrainads,

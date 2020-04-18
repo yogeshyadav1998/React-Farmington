@@ -40,7 +40,8 @@ class Subsidyform extends Component{
         Cropregistercerti:'',
         Landcerti:'',
         Photo:'',
-        Signature:''
+        Signature:'',
+        userid:''
     }
 
     nextstep = () => {
@@ -73,12 +74,12 @@ class Subsidyform extends Component{
                 Maritalstatus, Annualincome, Priority, Subsidytype, Investedamount, Loanaccountnumber,
                 Loanamount, Landarea, Additionaldetail, Accountholdername, Bankname,
                 Branchname, IFSCcode, PAN, Aadharcard, PANcard, Bankpassbook, Incomecerti,
-                Cropregistercerti, Landcerti, Photo, Signature} = this.state;
+                Cropregistercerti, Landcerti, Photo, Signature, userid} = this.state;
         const  values= {FirstName, LastName,FatherName, Age, Sex, Occupation, Address, Aadhar, Phone,
                 Maritalstatus, Annualincome, Priority, Subsidytype, Investedamount, Loanaccountnumber,
                 Loanamount, Landarea, Additionaldetail, Accountholdername, Bankname,
                 Branchname, IFSCcode, PAN, Aadharcard,  PANcard, Bankpassbook, Incomecerti,
-                Cropregistercerti, Landcerti, Photo, Signature}
+                Cropregistercerti, Landcerti, Photo, Signature, userid}
 
         switch(step){
             case 1:

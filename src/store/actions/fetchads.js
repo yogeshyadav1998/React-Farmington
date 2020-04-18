@@ -20,6 +20,34 @@ export const storeallads = (allads) =>{
     }
 }
 
+export const fetchuserads = () =>{
+    return dispatch =>{
+        dispatch(fetchadstart())
+        axios.get('/productads.json')
+        .then(response=>{
+            const fetchedads =[];
+            for(let key in response.data){
+                fetchedads.push(
+                    {...response.data[key],
+                    id: key}
+                )
+            }
+        const userid = localStorage.getItem('userid');
+        const userads = fetchedads.filter(ad => {
+            return ad.userid === userid
+        })
+        dispatch(storeallads(userads))
+        setTimeout(()=>{
+            dispatch(fetchadsuccess())
+        },1000)
+        })
+        .catch(error =>{
+            console.log(error)
+        })
+    }
+}
+
+
 export const fetchallads = () =>{
     return dispatch =>{
         dispatch(fetchadstart())

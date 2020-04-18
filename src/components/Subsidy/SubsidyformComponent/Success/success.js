@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 
 import { Row, Col, Select, Alert, Button, Icon} from 'antd';
 import './success.css'
-import Spinner from './../../../UI/SpinnerComponent/spinner';
+import Spinner from '../../../UI/SpinnerComponent/spinner';
  
 export class success extends Component{
 

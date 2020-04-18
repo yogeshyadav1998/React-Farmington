@@ -10,3 +10,9 @@ export const POST_AD_SUCCESS = 'POST_AD_SUCCESS';
 export const FETCH_ADS_START = 'FETCH_ADS_START';
 export const STORE_ALL_ADS = 'STORE_ALL_ADS';
 export const FETCH_ADS_SUCCESS = 'FETCH_ADS_SUCCESS';
+
+export const OPEN_SIGNPAGE = 'OPEN_SIGNPAGE';
+export const CLOSE_SIGNPAGE = 'CLOSE_SIGNPAGE';
+export const AUTH_START = 'AUTH_START';
+export const SET_AUTH = 'SET_AUTH';
+export const AUTH_LOGOUT = 'AUTH_LOGOUT'

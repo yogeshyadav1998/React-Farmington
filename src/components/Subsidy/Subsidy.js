@@ -5,8 +5,8 @@ import {connect} from 'react-redux';
 import {Row, Col, Button, Icon} from 'antd';
 import Subsidyrequest from './subsidyrequestComponent/subsidyrequest';
 import './Subsidy.css';
-import Spinner from './../UI/SpinnerComponent/spinner';
-import * as actions from './../../store/actions//index';
+import Spinner from '../UI/SpinnerComponent/spinner';
+import * as actions from '../../store/actions/index';
 
 class subsidy extends Component {
 

@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
+
 import { Row, Col, Button, Icon } from 'antd';
 import './headerComponent.css';
 import {Link} from 'react-scroll';
+import * as action from './../../../store/actions/index';
+
 class Header extends Component {
   state = {
     show: false
@@ -13,10 +17,18 @@ class Header extends Component {
     }
    }
 
+  opensignpage = () =>{
+    console.log('hii')
+    this.props.onopensignpage();
+  }
+
+  logout = () =>{
+    this.props.onlogout();
+  }
 
   render() {
     return (
-      <div style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
+      <div className="main" style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
         <Row className="header">
           <Col md={2} offset={2}>
             <div className="trade_name">
@@ -48,13 +60,31 @@ class Header extends Component {
           </Col>
           </div>
           : null}
+          {!this.props.tokenid?
           <Col md={2} style={{position:"absolute", right:"11vh"}}>
-            <a href="#">SignUp/SignIn</a>
+            <a onClick={this.opensignpage}>SignUp/SignIn</a>
           </Col>
+          : <Col md={2} style={{position:"absolute", right:"11vh"}}>
+              <a onClick={this.logout}>{this.props.name +' '+'Logout'}</a>
+            </Col>}
         </Row>
       </div>
     );
   }
 }
 
-export default Header;
+const mapStateToProps = state =>{
+  return{
+      name: state.auth.name,
+      tokenid: state.auth.tokenid
+  }
+}
+
+const mapDispatchToProps = dispatch =>{
+  return {
+    onlogout: () => dispatch(action.authlogout()),
+    onopensignpage: () => dispatch(action.opensignpage())
+  }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Header);

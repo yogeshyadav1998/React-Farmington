@@ -38,3 +38,9 @@ a:active {
   background: #d3d3d3;
   min-height: 6vh;
 }
+
+.main{
+  position: fixed;
+  top: 0;
+  left: 0;
+}

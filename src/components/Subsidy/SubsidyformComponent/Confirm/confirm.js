@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 import { Row, Col, Form, Icon, Input, Button, Select, Progress} from 'antd';
 import './confirm.css'
-import * as actions from './../../../../store/actions/index';
+import * as actions from '../../../../store/actions/index';
  
 export class confirm extends Component{
     continue = e =>{

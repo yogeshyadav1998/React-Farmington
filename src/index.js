@@ -11,13 +11,14 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import subsidyrequestreducer from './store/reducers/subsidy';
 import postadreducer from './store/reducers/postad';
-import fetchadsreducer from './store/reducers/fetchads'
+import fetchadsreducer from './store/reducers/fetchads';
+import authreducer from './store/reducers/auth';
 
 const rootreducer = combineReducers({
     subsidyrequest: subsidyrequestreducer,
     fetchads: fetchadsreducer,
-    postad: postadreducer
-    
+    postad: postadreducer,
+    auth: authreducer
 })
 
 

@@ -14,3 +14,11 @@ export {
     fetchgrainads,
     fetchpulsesads
 } from './fetchads';
+
+export {
+    opensignpage,
+    closesignpage,
+    auth,
+    authlogout,
+    authcheck
+} from './auth'
